@@ -6,7 +6,7 @@
   You can refresh the page at any time to re-run all the tests.
 */
 
-////////// PROBLEM 1 //////////
+//////////////////////////////////////////////////// PROBLEM 1 ////////////////////////////////////////////////////
 
 /*
   Create an object called me. 
@@ -15,10 +15,13 @@
 */
 
 //Code here
+var me = {
+  name: "Chuck",
+  age : 1
+}
 
-
-
-////////// PROBLEM 2 //////////
+alert(me.age)
+//////////////////////////////////////////////////// PROBLEM 2 ////////////////////////////////////////////////////
 
 /*
   Make a 'favoriteThings' object that contains the following keys: band, food, person, book, movie, holiday. 
@@ -26,26 +29,30 @@
 */
 
 //Code here
+var favoriteThings = {
+  band: "none",
+  food: "food",
+  person: "myself",
+  book: "books with words",
+  movie: "movies with words",
+  holiday:"new places"
 
-
+}
 
 /*
   After you've made your object, add another key named 'car' with the value being your favorite car and then another key named 'brand' with the value being your favorite brand.
 */
 
 //Code here
-
-
-
+favoriteThings.car = "mine"
+favoriteThings.brand = "ferrari"
 /*
   Now change the value of the food key in your favoriteThings object to be 'Chicken Nuggets' and change the value of the book key in your favoriteThings object to be 'Harry Potter'.
 */
-
 //Code here
-
-
-
-////////// PROBLEM 3 //////////
+favoriteThings.food = 'Chicken Nuggets'
+favoriteThings.book = 'Harry Potter'
+//////////////////////////////////////////////////// PROBLEM 3 ////////////////////////////////////////////////////
 
 /* 
   Create an empty Object called backPack. 
@@ -54,30 +61,28 @@
   Set the value of that key to 'chapstick'.
   Using dot notation, add another key (or property) to your backPack object that is named color, with the value being the color of your backpack. 
 */
-
 //Code here
+var backPack = {}
+var item = 'firstPocket';
 
-
-
+backPack[item] = "chapstick"
+backPack.color = "black"
 /*
   After you do the above, alert your entire backPack object.
 */
-
 //Code here
-
-
-
+alert(backPack)
 /*
 You probably noticed that it just alerted [object Object].
 Alerting to see the data in your Object doesn't work so well.
 Instead, console.log your whole backPack object and then check out the console. 
 */
-
 //Code here
+console.log(backPack)
 
 
 
-////////// PROBLEM 4 //////////
+//////////////////////////////////////////////////// PROBLEM 4 ////////////////////////////////////////////////////////
 
 // Do not edit the code below.
 var user2 = {
@@ -95,14 +100,14 @@ var user2 = {
   name -> 'Tyler S. McGinnis' and email -> 'tyler.mcginnis@devmounta.in'. 
   Make that change without modifying the original object code above.
 */
-
 //Code Here
+user2.name = 'Tyler S. McGinnis'
+user2.email = 'tyler.mcginnis@devmounta.in'
 
 
+////////// EXTRA PRACTICE PROBLEMS BELOW /////////
 
-////////// EXTRA PRACTICE PROBLEMS BELOW //////////
-
-////////// PROBLEM 5 //////////
+//////////////////////////////////////////////////// PROBLEM 5 ////////////////////////////////////////////////////
 
 /*
   Create an empty object called methodCollection.
@@ -110,43 +115,49 @@ var user2 = {
 
 //Code Here
 
-
+var methodCollection = {}
 
 /*
   Now add two methods (functions that are properties on objects) to your methodCollection object. 
   One called 'alertHello' which alerts 'hello' and another method called 'logHello' which logs 'hello' to the console. 
 */
-
 //Code Here
-
-
-
+methodCollection.alertHello = function(){
+  alert("hello");
+}
+methodCollection.logHello = function(){
+  console.log('hello')
+}
 /*
   Now call your alertHello and logHello methods.
 */
-
 //Code Here
-
-
-
-////////// PROBLEM 6 //////////
-
+methodCollection.alertHello();
+methodCollection.logHello();
+//////////////////////////////////////////////////// PROBLEM 6 ////////////////////////////////////////////////////
 /* 
   Create a function called makePerson which takes in name, birthday, ssn as its parameters. 
   Return a new object with all of the information that you passed in.
 */
-
 //Code Here
-
-
-
-////////// PROBLEM 7 //////////
-
+function makePerson(name, birthday, ssn){
+  return {
+    name: name,
+    birthday:birthday,
+    ssn:ssn
+  }
+}
+//////////////////////////////////////////////////// PROBLEM 7 ////////////////////////////////////////////////////
 /*
   Create a function called makeCard which takes in cardNumber, expirationDate, and securityCode to make a Credit Card object.
   Return that object so that whenever you invoke makeCard, you get a brand new credit card.
 */
-
 //Code Here
 
-
+function makeCard(cardNumber, expirationDate, securityCode){
+  return {
+    cardNumber: cardNumber,
+    expirationDate: expirationDate,
+    securityCode: securityCode
+  }
+}
